@@ -1,0 +1,624 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url('../fonts/Lobster-Regular.ttf')
+}
+
+
+h2, h3, h4 {
+    color: #53d091;
+}
+
+button {
+    width: 130px;
+    background-color: #53d091;
+    color: #fff;
+    border: none;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+hr {
+    color: #666;
+}
+
+body {
+    width: 100%;
+    font-size: 16px;
+    font-family: Ubuntu-medium, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #999;
+    color: #333;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0;
+    height: 100%;
+}
+
+nav {
+    display: table;
+    width: 100%;
+    height: 100px;
+    text-align: left;
+    background: #333;
+    line-height: 100px;
+    margin-top: -15px;
+}
+
+nav .logo i {
+    color: #53d091;
+}
+
+nav .brand {
+    font-family: "Lobster", Ubuntu, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-table;
+}
+
+nav .nav-items {
+    margin-top: 10px;
+    padding-top: 10px;
+    top: 100px;
+    padding: 10px 15px;
+    background-color: #fff;
+    line-height: 50px;
+}
+
+nav .nav-items a, nav .nav-items p {
+    display: table-row;
+    color: #333;
+    margin-top: 15px;
+}
+
+nav .nav-items a {
+    text-decoration: none;
+}
+
+nav .phone i {
+    margin-left: -3px;
+}
+
+.cssvwunit nav {
+    max-width: 100vw;
+}
+
+.js .nav-items {
+    position: absolute;
+    left: -300px;
+    -webkit-transition: .1s ease;
+    transition: .1s ease;
+}
+
+.js .menu, .js .close {
+    color: #fff;
+    font-size: 36px;
+    position: absolute;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.js .close {
+    font-size: 0px;
+    display: none;
+}
+
+.no-js .menu, .no-js .close {
+    display: none;
+}
+
+.no-js .nav-items {
+    position: absolute;
+    top: 100px;
+}
+
+.no-js .brand {
+    position: relative;
+    display: table-row;
+    right: 0;
+    left: 20px;
+}
+
+.no-js .car-wrap {
+    width: 100%;
+    height: 400px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.no-js .car-wrap .owl-carousel {
+    width: 3200px;
+    height: 100%;
+}
+
+.no-js .car-wrap .owl-carousel .product {
+    display: inline-block;
+    margin-left: 20px;
+    border: #53d091 solid 2px;
+    padding: 10px;
+}
+
+.js .car-wrap {
+    height: 400px;
+}
+
+.js .car-wrap .owl-item .product {
+    width: 170px;
+    margin: auto;
+    border: solid 2px #53d091;
+    padding: 10px;
+}
+
+.js .car-wrap .owl-item .image {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+.js .owl-nav {
+    margin: -150px -120px;
+    font-size: 2.5rem;
+    color: #53d091;
+    padding: 0 45px;
+}
+
+.js .owl-nav .owl-prev, .js .owl-nav .owl-next {
+    z-index: 2;
+}
+
+.js .owl-nav .owl-prev {
+    float: left;
+}
+
+.js .owl-nav .owl-next {
+    float: right;
+}
+
+.js .owl-dots {
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.js .owl-dots .owl-dot {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    background-color: #999;
+    margin-left: 10px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-transition: background-color .5s ease;
+    transition: background-color .5s ease;
+}
+
+.js .owl-dots .active {
+    background-color: #53d091;
+}
+
+.news-wrap .image, .news-wrap .gallery, .interiors-wrap .image, .interiors-wrap .gallery, .fact-wrap .image, .fact-wrap .gallery {
+    margin: 15px;
+    max-width: 400px;
+    display: table;
+}
+
+.news-wrap .image img, .news-wrap .gallery img, .interiors-wrap .image img, .interiors-wrap .gallery img, .fact-wrap .image img, .fact-wrap .gallery img {
+    width: 100%;
+}
+
+.news-wrap .image .smalls, .news-wrap .gallery .smalls, .interiors-wrap .image .smalls, .interiors-wrap .gallery .smalls, .fact-wrap .image .smalls, .fact-wrap .gallery .smalls {
+    max-width: 350px;
+}
+
+.news-wrap .image .smalls img, .news-wrap .gallery .smalls img, .interiors-wrap .image .smalls img, .interiors-wrap .gallery .smalls img, .fact-wrap .image .smalls img, .fact-wrap .gallery .smalls img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: -1.5px;
+    float: left;
+}
+
+.news-wrap .image .smalls .first-small, .news-wrap .gallery .smalls .first-small, .interiors-wrap .image .smalls .first-small, .interiors-wrap .gallery .smalls .first-small, .fact-wrap .image .smalls .first-small, .fact-wrap .gallery .smalls .first-small {
+    margin-left: auto;
+}
+
+.news-wrap .image .smalls .big, .news-wrap .gallery .smalls .big, .interiors-wrap .image .smalls .big, .interiors-wrap .gallery .smalls .big, .fact-wrap .image .smalls .big, .fact-wrap .gallery .smalls .big {
+    margin-top: -4px;
+}
+
+.news-wrap .text, .interiors-wrap .text, .fact-wrap .text {
+    max-width: 100%;
+    margin: 15px;
+    text-align: left;
+}
+
+.news-wrap .text a, .interiors-wrap .text a, .fact-wrap .text a {
+    text-decoration: none;
+    color: #53d091
+}
+
+.news-wrap .text a:hover, .interiors-wrap .text a:hover, .fact-wrap .text a:hover {
+    text-decoration: underline
+}
+
+.news-wrap button, .interiors-wrap button, .fact-wrap button {
+    width: 150px;
+    text-align: center;
+}
+
+main {
+    margin: 80px auto;
+}
+
+
+footer {
+    max-width: 100%;
+    min-height: 300px;
+    background-color: #333;
+    text-align: left;
+    padding: 15px;
+}
+
+
+footer .footer-column {
+    max-width: 150px;
+    display: inline-table;
+    margin-left: 10%;
+    word-wrap: none;
+}
+
+
+footer h3 {
+    color: #fff;
+}
+
+
+footer a {
+    color: #999;
+    text-decoration: none;
+    display: table-row;
+    -webkit-transition: color .5s ease;
+    transition: color .5s ease
+}
+
+
+footer a:hover {
+    color: #53d091
+}
+
+
+footer .phone {
+    text-align: center;
+    color: #999;
+}
+
+
+footer .phone i {
+    color: #53d091;
+}
+
+
+footer .socials {
+    margin-top: -10px;
+}
+
+
+footer .socials a {
+    display: inline-block;
+}
+
+
+footer .socials .icon-twitter {
+    color: #0066ff;
+}
+
+
+footer .socials .icon-facebook {
+    color: #3771c8;
+}
+
+
+footer .socials .icon-vkontakte {
+    color: #d5e5ff;
+}
+
+
+footer .socials .icon-gplus {
+    color: #d67070;
+}
+
+
+footer .email {
+    max-width: 150px;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+
+footer .email input {
+    max-width: 100%;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 3px 10px;
+    margin: 10px auto;
+    height: 25px;
+}
+
+
+footer .email .send {
+    font-size: 25px;
+    color: #888;
+    cursor: pointer;
+    position: absolute;
+    bottom: 8px;
+    right: -25px;
+}
+
+
+footer .copyright {
+    text-align: center;
+    color: #999;
+}
+
+
+@media (min-width: 0px) and (max-width: 900px) {
+
+
+    body {
+        font-size: 20px
+    }
+
+
+    .brand {
+        position: absolute;
+        right: 20px
+    }
+
+
+    .logo {
+        display: none
+    }
+}
+
+
+@media (min-width: 900px) {
+
+
+    nav {
+        height: 400px;
+        background: url('../img/1.png') no-repeat;
+        line-height: 50px
+    }
+
+
+    .js .menu, .js .close, .no-js .menu, .no-js .close {
+        display: none
+    }
+
+
+    .js .brand, .no-js .brand {
+        position: relative;
+        display: table-cell;
+        margin-left: 0.5rem;
+        right: 0;
+        font-size: 36px
+    }
+
+
+    .js .nav-items, .no-js .nav-items {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        display: inline-table;
+        background: none;
+        margin-left: 1rem
+    }
+
+
+    .js .nav-items a, .js .nav-items p, .no-js .nav-items a, .no-js .nav-items p {
+        display: inline-block;
+        color: #fff;
+        margin-left: 3rem
+    }
+
+
+    .js .nav-items a, .no-js .nav-items a {
+        -webkit-transition: color .5s ease;
+        transition: color .5s ease
+    }
+
+
+    .js .nav-items a:hover, .no-js .nav-items a:hover {
+        text-decoration: underline;
+        color: #53d091
+    }
+
+
+    .js .nav-items .phone, .no-js .nav-items .phone {
+        float: right;
+        margin-right: 3rem
+    }
+
+
+    .js .nav-items .phone i, .no-js .nav-items .phone i {
+        color: #53d091
+    }
+
+
+    .js .logo, .no-js .logo {
+        display: inline-block;
+        font-size: 36px;
+        margin-left: 1rem
+    }
+
+
+    .news-wrap .image, .news-wrap .gallery, .interiors-wrap .image, .interiors-wrap .gallery, .fact-wrap .image, .fact-wrap .gallery {
+        float: left;
+        margin: 0 15px
+    }
+
+
+    .news-wrap .text, .interiors-wrap .text, .fact-wrap .text {
+        max-width: 800px;
+        padding-left: 50px;
+        height: 100px;
+        overflow: hidden
+    }
+
+
+    .news-wrap .text p, .interiors-wrap .text p, .fact-wrap .text p {
+        margin-top: -2px
+    }
+
+
+    .news-wrap {
+        height: 350px
+    }
+
+
+    .news-wrap .text {
+        height: 240px
+    }
+
+
+    .interiors-wrap {
+        height: 350px
+    }
+
+
+    .interiors-wrap .text {
+        height: 200px
+    }
+
+
+    .fact-wrap, .interiors-wrap {
+        text-align: left
+    }
+
+
+    .fact-wrap button, .interiors-wrap button {
+        margin-left: 50px
+    }
+}
+
+
+@media (max-width: 900px) {
+
+
+    .no-js .car-header {
+        margin-top: 15rem
+    }
+}
+
+
+@media (min-width: 770px) {
+
+
+    .js .car-wrap {
+        width: 80%;
+        margin: auto
+    }
+
+
+    .js .owl-dots {
+        margin-top: 170px
+    }
+}
+
+
+@media (min-width: 0px) and (max-width:480px) {
+
+
+    .interiors-wrap .gallery .smalls {
+        display: none
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 700px) {
+
+
+    .news-wrap .image, .interiors-wrap .gallery, .fact-wrap .image {
+        max-width: 100%;
+        margin: auto
+    }
+}
+
+
+@media (min-width: 700px) and (max-width: 899px) {
+
+
+    .news-wrap .image, .interiors-wrap .gallery, .fact-wrap .image {
+        float: left;
+        margin: 0 15px
+    }
+
+
+    .fact-wrap {
+        max-width: 100%;
+        height: 250px
+    }
+
+
+    .fact-wrap .text {
+        height: 100%
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 500px) {
+
+
+    footer .footer-column {
+        margin: 20px;
+        display: table
+    }
+
+
+    footer .phone {
+        text-align: left;
+        margin-left: 15px
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 760px) {
+
+
+    footer .footer-column {
+        margin: 20px;
+        display: inline-table;
+        max-width: 200px;
+        width: 50%
+    }
+
+
+    footer .phone {
+        text-align: center
+    }
+}
+
+
+@media (min-width: 760px) and (max-width: 1000px) {
+
+
+    footer .footer-column {
+        margin: 20px;
+        display: inline-table;
+        max-width: 280px;
+        width: 50%
+    }
+}
